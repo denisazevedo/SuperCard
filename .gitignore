@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 # OS X
 .DS_Store
 
 # Xcode
 build/
+=======
+# Xcode
+.DS_Store
+*/build/*
+>>>>>>> 1d62bb1e2dd356b5c21787fde8a23e4de6942f81
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -12,6 +18,7 @@ build/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata
+<<<<<<< HEAD
 *.xccheckout
 profile
 *.moved-aside
@@ -20,4 +27,14 @@ DerivedData
 *.ipa
 
 # CocoaPods
+=======
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.hmap
+*.xccheckout
+
+#CocoaPods
+>>>>>>> 1d62bb1e2dd356b5c21787fde8a23e4de6942f81
 Pods
