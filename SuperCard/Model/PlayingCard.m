@@ -40,7 +40,8 @@ static const int MATCH_SCORE_SUIT = 1;
 
 @synthesize suit = _suit;
 + (NSArray *)validSuits {
-    return @[@"♠️", @"♣️", @"♥️", @"♦️"];
+//    return @[@"♠️", @"♣️", @"♥️", @"♦️"];
+    return @[@"♠", @"♣", @"♥", @"♦"];
 }
 - (NSString *)suit {
     return _suit ? _suit : @"?";
