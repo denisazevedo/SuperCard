@@ -47,6 +47,15 @@
     [self setNeedsDisplay];
 }
 
+- (NSString *)rankAsString
+{
+    return @[@"?",@"A",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"J",@"Q",@"K"][self.rank];
+}
+
+#pragma mark - Gesture Handling
+
+
+
 #pragma mark - Drawing
 
 #define CORNER_FONT_STANDARD_HEIGHT 180.0
@@ -63,6 +72,7 @@
     UIBezierPath *roundRect = [UIBezierPath bezierPathWithRoundedRect:self.bounds
                                                          cornerRadius:[self cornerRadius]];
     [roundRect addClip];
+    
     [[UIColor whiteColor] setFill];
     UIRectFill(self.bounds);
     
@@ -78,21 +88,16 @@
             [faceImage drawInRect:imageRect];
         } else {
             [self drawPips];
-        }
+        }        
+        [self drawCorners];
+
     } else {
         [[UIImage imageNamed:@"cardback"] drawInRect:self.bounds];
     }
-    
-    [self drawCorners];
 }
 
 - (void)drawPips {
     
-}
-
-- (NSString *)rankAsString
-{
-    return @[@"?",@"A",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"J",@"Q",@"K"][self.rank];
 }
 
 - (void)drawCorners {
